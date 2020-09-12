@@ -85,6 +85,7 @@ import {
   faSearch as fasSearch,
   faSignOutAlt as fasSignOutAlt,
   faSitemap as fasSitemap,
+  faSkullCrossbones as fasSkullCrossbones,
   faSort as fasSort,
   faSortDown as fasSortDown,
   faSortUp as fasSortUp,
@@ -223,3 +224,4 @@ export const UNSAVED_SETTING = farDotCircle;
 export const VIEW = fasEye;
 export const WARNING = fasExclamationTriangle;
 export const WIKI = fasBookReader;
+export const BLACKLIST = fasSkullCrossbones;
