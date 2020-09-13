@@ -6,6 +6,12 @@ import createQueueItemSelector from 'Store/Selectors/createQueueItemSelector';
 import createUISettingsSelector from 'Store/Selectors/createUISettingsSelector';
 import AgendaEvent from './AgendaEvent';
 
+const startDate = new Date();
+startDate.setDate(startDate.getDate() - 1);
+
+const endDate = new Date();
+endDate.setDate(endDate.getDate() + 31);
+
 function createMapStateToProps() {
   return createSelector(
     (state) => state.calendar.options,
@@ -21,7 +27,9 @@ function createMapStateToProps() {
         ...calendarOptions,
         timeFormat: uiSettings.timeFormat,
         longDateFormat: uiSettings.longDateFormat,
-        colorImpairedMode: uiSettings.enableColorImpairedMode
+        colorImpairedMode: uiSettings.enableColorImpairedMode,
+        startDate,
+        endDate
       };
     }
   );
